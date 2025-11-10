@@ -1,4 +1,7 @@
 streamlit
-yfinance
-pandas
 plotly
+yfinance
+requests
+pandas
+duckduckgo-search
+openai
