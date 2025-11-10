@@ -5,6 +5,7 @@ from utils.weather import get_weather
 from utils.news import get_news
 from utils.emailer import fetch_emails
 from utils.calendarer import list_events, add_event
+USE_MOCK = True  # flip this later if you connect live
 
 st.set_page_config(page_title="Agentic AI", page_icon="🧠", layout="wide")
 
@@ -50,3 +51,10 @@ if user:
 
 for m in st.session_state.messages:
     with st.chat_message(m["role"]): st.write(m["content"])
+if USE_MOCK:
+    from utils.emailer import fetch_emails
+    from utils.calendarer import list_events, add_event
+else:
+    from utils.gmail_live import fetch_emails
+    from utils.calendar_live import list_events, add_event
+
