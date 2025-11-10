@@ -1,9 +1,10 @@
 streamlit
 langchain>=0.2.0
+langchain-community
+langchain-openai
 openai
 requests
 msal
 python-dotenv
 pandas
 plotly
-langchain-community
