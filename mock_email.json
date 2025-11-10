@@ -1,0 +1,12 @@
+[
+  {
+    "sender": "ceo@corp.com",
+    "subject": "Strategy update meeting invite",
+    "time": "2025-11-09 09:15"
+  },
+  {
+    "sender": "hr@corp.com",
+    "subject": "Remote work policy changes",
+    "time": "2025-11-09 11:40"
+  }
+]
