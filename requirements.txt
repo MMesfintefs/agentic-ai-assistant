@@ -1,10 +1,8 @@
-streamlit
-langchain==0.0.350
-langchain-community==0.0.10
-langchain-openai
-openai
-requests
-msal
-python-dotenv
-pandas
+streamlit>=1.36
+yfinance
 plotly
+pandas
+requests
+google-auth
+google-auth-oauthlib
+google-api-python-client
