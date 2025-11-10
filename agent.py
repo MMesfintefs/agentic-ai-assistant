@@ -1,4 +1,5 @@
-from langchain.agents import initialize_agent, Tool
+from langchain.agents import initialize_agent
+from langchain.tools import Tool
 from langchain.chat_models import ChatOpenAI
 from tools.email_tool import fetch_emails
 from tools.calendar_tool import get_events
