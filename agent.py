@@ -1,4 +1,5 @@
-from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain.agents import AgentExecutor
+from langchain.agents.tool_calling import create_tool_calling_agent
 from langchain.tools import Tool
 from langchain_openai import ChatOpenAI
 
@@ -16,8 +17,7 @@ def run_agent(prompt):
         Tool(name="News", func=get_headlines, description="Get top news."),
     ]
 
-    # This replaces initialize_agent / create_react_agent
-    agent = create_tool_calling_agent(llm, tools)
+    agent = create_tool_calling_agent(llm=llm, tools=tools)
     agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
     result = agent_executor.invoke({"input": prompt})
