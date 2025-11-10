@@ -1,5 +1,4 @@
-from langchain.agents import create_react_agent
-from langchain.agents.react.base import DocstoreExplorer
+from langchain_community.agent_toolkits import create_react_agent
 from langchain.tools import Tool
 from langchain_openai import ChatOpenAI
 
@@ -15,6 +14,8 @@ def run_agent(prompt):
         Tool(name="Calendar", func=get_events, description="List today’s events."),
         Tool(name="News", func=get_headlines, description="Get top news.")
     ]
-    # Use the new LangChain 0.2.x agent factory
-    agent = create_react_agent(llm, tools)
-    return agent.invoke(prompt)
+
+    # Proper creation method in langchain_community>=0.2.x
+    agent = create_react_agent(llm=llm, tools=tools)
+    result = agent.invoke(prompt)
+    return result
