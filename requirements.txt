@@ -1,7 +1,8 @@
 streamlit
-plotly
-yfinance
-requests
-pandas
-duckduckgo-search
+langchain
 openai
+requests
+msal
+python-dotenv
+pandas
+plotly
